@@ -4,6 +4,8 @@
 // compaire
 
 const isPalindrome = (string) => {
+  // this is for remove spacing, symbols, and uppercase/lowercase differences.
+  string = string.toLowerCase().replace(/[^a-z0-9]/g, "");
   let left = 0;
   let right = string?.length - 1;
 
@@ -18,5 +20,5 @@ const isPalindrome = (string) => {
 };
 
 // console.log(isPalindrome("madam"));
-// second method 
-console.log("madam" === "madam".split("").reverse().join(""))
+// second method
+console.log("madam" === "madam".split("").reverse().join(""));
